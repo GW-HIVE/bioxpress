@@ -1,0 +1,9 @@
+Toggle between (a) and (b) to install different versions of DESeq2 and check with packageVersion("DESeq2")
+
+a)  if (!requireNamespace("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+
+    BiocManager::install("DESeq2")
+
+b)  install.packages("/home/rykahsay/temp/DESeq2_1.18.1.tar.gz", repos = NULL, type="source")
+

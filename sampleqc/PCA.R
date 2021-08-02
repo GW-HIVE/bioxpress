@@ -1,0 +1,15 @@
+	library(DESeq2)
+	samples <- data.frame(row.names=colnames(dataAna), condition=treatAna,type=subjectAna)
+	data <- DESeqDataSetFromMatrix(countData = dataAna, colData=samples,design=~condition)
+	dds=DESeq(data4)
+	res <- results(dds, contrast=c('condition','cancer','normal'))
+					
+	resOrdered <- res[order(res$padj),]
+	head(resOrdered)
+	summary(res,alpha=0.01)
+	write.table(resOrdered,paste(cancerType,j,cate,"DESeq_results_new.csv",sep="_"),sep=",")
+	foo = counts(dds, normalized = TRUE)
+	write.table(foo, paste(cancerType,j,cate,"normailzed_dds.csv",sep="_"),sep=",")
+	pdf(paste(cancerType,j,cate,'plot.pdf',sep="_"))
+	rld <- rlogTransformation(dds, blind=TRUE)
+	plotPCA(rld, intgroup = 'condition')

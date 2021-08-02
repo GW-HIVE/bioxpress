@@ -1,0 +1,17 @@
+{
+	"extractor":{
+		"inputdir":"/data/projects/bioxpress/v-2.1/downloads/",
+		"outputdir":"/data/projects/bioxpress/v-2.1/generated/extractor/"
+	},
+	"sampleqc":{
+		"inputdir":"/data/projects/bioxpress/v-2.1/generated/extractor/",
+		"outputdir":"/data/projects/bioxpress/v-2.1/generated/sampleqc/"
+	},
+	"deseq":{
+		"inputdir":"/data/projects/bioxpress/v-2.1/generated/",
+                "outputdir":"/data/projects/bioxpress/v-2.1/generated/deseq/"
+	},
+	"rscriptpath":"/usr/local/bin/Rscript"        
+}
+
+

@@ -1,0 +1,85 @@
+{
+	"biox_cancer":{
+		"mainid":"id"
+		,"fields":[
+			"id", "doId", "doName"
+		]
+	}
+	,"biox_boxplot":{
+		"mainid":"boxplotId"
+		,"fields":[
+			"boxplotId", "featureId", "sampleId", "boxplotType", "frequency"
+			,"min", "firstQuantile", "secondQuantile", "thirdQuantile", "max"
+			,"cancerId"
+		]
+	}
+	,"biox_dataset_fields":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "datasetId", "name", "description", "type"
+                ]
+        }
+	,"biox_dataset_numericvalues":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "fieldId", "value", "recordId"
+                ]
+        }
+	,"biox_dataset_stringvalues":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "fieldId", "value", "recordId"
+                ]
+        }
+	,"biox_dataset_records":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "datasetId", "mainId"
+                ]
+        }
+	,"biox_datasets":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "name", "description", "source", "createdts"
+                ]
+        }
+	,"biox_feature":{
+                "mainid":"featureId"
+                ,"fields":[
+                        "featureId", "featureName", "featureType"
+                ]
+        }
+	,"biox_level":{
+                "mainid":"levelId"
+                ,"fields":[
+                        "levelId", "featureId", "sampleId", "logFc", "pValue"
+                        ,"adjPvalue", "sigFlag", "deDirection", "subjectsRatio", "dataSource"
+                        ,"pmid", "countOne", "countTwo", "cancerId"
+                ]
+        }
+	,"biox_xref":{
+                "mainid":"refId"
+                ,"fields":[
+                        "refId", "xrefId", "xrefSrc", "featureId"
+                ]
+        }
+	,"biox_tissue":{
+                "mainid":"tissueId"
+                ,"fields":[
+                        "tissueId", "tissueName"
+                ]
+        }
+	,"biox_stat":{
+                "mainid":"id"
+                ,"fields":[
+                        "id", "title", "jsonstring"
+                ]
+        }
+	,"biox_sample":{
+                "mainid":"sampleId"
+                ,"fields":[
+                        "sampleId", "sampleName", "sampleSynonym", "tissueId"
+                ]
+        }
+}
+
