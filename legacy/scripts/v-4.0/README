@@ -1,9 +1,0 @@
-   directories - download 
-                 download/sample_list_from_gdc  #scripts and README to pull files from tcga and unpack
-                 download/files_tcga  #location of pulled files and location of annotated (transcripts to gene name merged hitlists and category tables)
-                 annotation #README contains very brief instructions to pull ensemble transcript to gene mapping, contains merge scripts which will take downloads from download/files_tcga and compile them and map them from transcript to gene (will write to download/files_tcga)
-                 deseq #script to run simple deseq does not contain per patient info this needs to be built. requires symlink to /download/files_tcga/merged_filtered...
-
-
-
-For completed downloads, assembled hittables, category tables, and completed deseq runs see ~bfochtman/bioXpress - I did not want to upload all the data to github

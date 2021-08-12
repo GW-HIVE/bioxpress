@@ -9,7 +9,7 @@ want = [] #only studies with >=10 tumor and normal samples
 ################################################################
 ### From "get_data_all_samples.log" download log count up the number of samples
 
-with open("get_data_all_samples.log", 'r') as fil:
+with open("/data/projects/bioxpress/v-5.0/downloads/get_data_all_samples.log", 'r') as fil:
     for line in fil:
         spl = line.split()
         #print proj_id, sam_type, len(fil_list), len(uniq_fil_list)
@@ -41,7 +41,7 @@ for proj_id in collector:
 ################################################################
 ### Extract and compile hitlists
 
-topDir = "/home/bfochtman/bioXpress/download/files_tcga"
+topDir = "/data/projects/bioxpress/v-5.0/downloads/"
 for proj_id in want:
     print proj_id
     primDir = os.path.join(topDir, proj_id)

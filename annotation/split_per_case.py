@@ -26,7 +26,7 @@ def main():
 
 
 
-    in_file = "generated/misc/studies.csv"
+    in_file = "/data/projects/bioxpress/v-5.0/generated/misc/studies.csv"
     data_frame = {}
     csvutil.load_sheet(data_frame,in_file, "\t")
     f_list = data_frame["fields"]
@@ -35,7 +35,7 @@ def main():
 
 
 
-    in_file = "downloads/sample_list_from_gdc/gdc_sample_sheet.primary_tumor.tsv"
+    in_file = "/data/projects/bioxpress/v-5.0/downloads/sample_list_from_gdc/gdc_sample_sheet.primary_tumor.tsv"
     data_frame = {}
     csvutil.load_sheet(data_frame,in_file, "\t")
     f_list = data_frame["fields"]
@@ -54,7 +54,7 @@ def main():
         fileid2cat[case_id][file_id] = "Primary-Tumor"
 
 
-    in_file = "downloads/sample_list_from_gdc/gdc_sample_sheet.solid_tissue_normal.tsv"
+    in_file = "/data/projects/bioxpress/v-5.0/downloads/sample_list_from_gdc/gdc_sample_sheet.solid_tissue_normal.tsv"
     data_frame = {}
     csvutil.load_sheet(data_frame,in_file, "\t")
     f_list = data_frame["fields"]
@@ -78,11 +78,11 @@ def main():
             study_id = caseid2studyid[case_id]
             if study_id not in study_list:
                 continue
-            out_file_one = "generated/annotation/per_case/%s.%s.htseq.counts" % (study_id,case_id)
-            out_file_two = "generated/annotation/per_case/%s.%s.categories" % (study_id,case_id)
+            out_file_one = "/data/projects/bioxpress/v-5.0/generated/annotation/per_case/%s.%s.htseq.counts" % (study_id,case_id)
+            out_file_two = "/data/projects/bioxpress/v-5.0/generated/annotation/per_case/%s.%s.categories" % (study_id,case_id)
             FW1 = open(out_file_one, "w")
             FW2 = open(out_file_two, "w")
-            in_file = "generated/annotation/per_study/%s.htseq.counts" % (study_id)
+            in_file = "/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.htseq.counts" % (study_id)
             data_frame = {}
             csvutil.load_sheet(data_frame,in_file, ",")
             f_list = data_frame["fields"]

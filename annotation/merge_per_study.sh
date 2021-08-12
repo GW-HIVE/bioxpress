@@ -1,16 +1,16 @@
-in_dir="/data/projects/bioxpress/v-4.0/downloads/tcga/files_tcga/"
-out_dir="/data/projects/bioxpress/v-4.0/generated/annotation/per_study/"
+in_dir="/data/projects/bioxpress/v-5.0/downloads/tcga/files_tcga"
+out_dir="/data/projects/bioxpress/v-5.0/generated/annotation/per_study"
 log_file="$out_dir/merge_per_study.log"
-map_file_one="/data/projects/bioxpress/v-4.0/downloads/ensembl/mart_export.txt"
-map_file_two="/data/projects/bioxpress/v-4.0/downloads/ensembl/mart_export_remap_retired.txt"
-map_file_three="/data/projects/bioxpress/v-4.0/downloads/ensembl/new_mappings.txt"
+map_file_one="/data/projects/bioxpress/v-5.0/downloads/ensembl/mart_export.txt"
+map_file_two="/data/projects/bioxpress/v-5.0/downloads/ensembl/mart_export_remap_retired.txt"
+map_file_three="/data/projects/bioxpress/v-5.0/downloads/ensembl/new_mappings.txt"
 
 
 
 rm $log_file
 touch $log_file
 
-for study in `cat ./toy.dat`
+for study in `cat ./studies.dat`
 do
 echo $study
 

@@ -1,9 +1,0 @@
-1) python dump-sample-pairing.py -i ../conf/config-2.1.json -r tgca
-
-For biox-extractor-singlesubject.py  
-	2) python biox-extractor-singlesubject.py -i ../conf/config-2.1.json -r tcga -c BRCA -s TCGA-A7-A13E
-
-For biox-extractor-allsubjects.py
-	3) python biox-extractor-allsubjects.py -i ../conf/config-2.1.json -r tcga -c BRCA
-
-

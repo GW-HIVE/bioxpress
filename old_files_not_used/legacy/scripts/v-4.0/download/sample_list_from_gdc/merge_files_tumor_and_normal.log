@@ -1,0 +1,146 @@
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-KIRP  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-KIRP_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-KIRP_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Warning: Overwritting  ../files_tcga/merged_gene_filtered/TCGA-KIRP.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KIRP.htseq.counts
+Warning: Overwritting  ../files_tcga/merged_gene_filtered/TCGA-KIRP.categories
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KIRP.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-KICH  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-KICH_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-KICH_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KICH.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KICH.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-KIRC  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-KIRC_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-KIRC_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KIRC.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-KIRC.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-BRCA  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-BRCA_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-BRCA_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-BRCA.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-BRCA.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-PRAD  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-PRAD_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-PRAD_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-PRAD.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-PRAD.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-LUAD  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-LUAD_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-LUAD_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LUAD.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LUAD.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-READ  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-READ_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-READ_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-READ.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-READ.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-ESCA  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-ESCA_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-ESCA_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-ESCA.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-ESCA.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-THCA  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-THCA_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-THCA_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-THCA.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-THCA.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-UCEC  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-UCEC_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-UCEC_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-UCEC.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-UCEC.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-STAD  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-STAD_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-STAD_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-STAD.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-STAD.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-LIHC  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-LIHC_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-LIHC_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LIHC.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LIHC.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-COAD  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-COAD_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-COAD_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-COAD.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-COAD.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-HNSC  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-HNSC_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-HNSC_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-HNSC.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-HNSC.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-LUSC  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-LUSC_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-LUSC_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LUSC.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-LUSC.categories
+##################################################################################################
+python merge_files_tumor_and_normal.py ../files_tcga/TCGA-BLCA  ../files_tcga/merged_gene_filtered/
+Reading file ids from ../files_tcga/TCGA-BLCA_Primary-Tumor_intermediate
+Starting merge
+Reading file ids from ../files_tcga/TCGA-BLCA_Solid-Tissue-Normal_intermediate
+Starting merge
+Beginning writeHitList
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-BLCA.htseq.counts
+Completed writing of ../files_tcga/merged_gene_filtered/TCGA-BLCA.categories

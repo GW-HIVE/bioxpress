@@ -20,7 +20,7 @@ def main():
 
     tissue_dict = {}
 
-    in_file = "generated/misc/tissues.csv"
+    in_file = "/data/projects/bioxpress/v-5.0/generated/misc/tissues.csv"
     data_frame = {}
     csvutil.load_sheet(data_frame,in_file, ",")
     f_list = data_frame["fields"]
@@ -33,8 +33,8 @@ def main():
 
 
     for tissue_id in tissue_dict:
-        out_file_one = "generated/annotation/per_tissue/%s.htseq.counts" % (tissue_id)
-        out_file_two = "generated/annotation/per_tissue/%s.categories" % (tissue_id)
+        out_file_one = "/data/projects/bioxpress/v-5.0/generated/annotation/per_tissue/%s.htseq.counts" % (tissue_id)
+        out_file_two = "/data/projects/bioxpress/v-5.0/generated/annotation/per_tissue/%s.categories" % (tissue_id)
         FW1 = open(out_file_one, "w")
         FW2 = open(out_file_two, "w")
         FW2.write("%s,%s\n" % ("id","status"))
@@ -42,14 +42,14 @@ def main():
         grid = {}
         seen = {}
         for study_id in tissue_dict[tissue_id]:
-            in_file = "generated/annotation/per_study/%s.categories" % (study_id)
+            in_file = "/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.categories" % (study_id)
             data_frame = {}
             csvutil.load_sheet(data_frame,in_file, ",")
             f_list = data_frame["fields"]
             for row in data_frame["data"]:
                 FW2.write("%s\n" % (",".join(row) ))
 
-            in_file = "generated/annotation/per_study/%s.htseq.counts" % (study_id)
+            in_file = "/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.htseq.counts" % (study_id)
             data_frame = {}
             csvutil.load_sheet(data_frame,in_file, ",")
             f_list = data_frame["fields"]

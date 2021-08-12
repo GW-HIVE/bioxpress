@@ -1,0 +1,50 @@
+{
+	"retrieveQuery1":{
+
+		"querystring": "SELECT name FROM biox_datasets"
+	}
+
+	,"retrieveQuery2":{
+
+		"querystring": "SELECT id FROM biox_datasets WHERE"
+		,"fielddict":{}
+	}
+	,"retrieveQuery3":{
+		
+		"querystring": "SELECT id FROM biox_dataset_fields WHERE"
+	}
+
+	,"insertQuery1":{
+
+		"querystring": "INSERT INTO biox_dataset_numericvalues (fieldId, recordId, value) VALUES "
+		,"foreignkey":["datasetId", "fieldId"]
+	}
+
+	,"insertQuery2":{
+
+		"querystring": "INSERT INTO biox_datasets (%s) VALUES "
+	}
+
+	,"insertQuery3":{
+
+		"querystring": "INSERT INTO biox_dataset_fields (%s) VALUES "
+		,"foreignkey":["datasetId"]
+	}
+
+	,"insertQuery4":{
+
+		"querystring": "INSERT INTO biox_dataset_stringvalues (fieldId, recordId, value) VALUES "
+		,"foreignkey":["datasetId", "fieldId"]
+	}
+
+	,"insertQuery5":{
+
+		"querystring": "INSERT INTO biox_subject (cancerId,subjectCode,seqMethod,yearOfBorn,gender,weight,tumorStage,daysToDeath,height,yearOfDeath,ageAtDiagonoses,ethnicity,yearOfSmoke,race,primaryDiagnosis,alcoholHistory,vitalStatus) VALUES "
+		,"foreignkey":["cancerId"]
+	}
+
+	,"insertQuery6":{
+
+		"querystring": "INSERT INTO biox_dataset_records (datasetId) VALUES "
+	}
+}

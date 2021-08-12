@@ -41,7 +41,7 @@ with open(inputFile) as csvfile:
 files_endpt = "https://api.gdc.cancer.gov/files"
 data_endpt = "https://api.gdc.cancer.gov/data"
 
-path0 = "/home/bfochtman/bioXpress/download/files_tcga/"
+path0 = "/data/projects/bioxpress/v-5.0/downloads/"
 for proj_id in collector:
     path1 = os.path.join(path0,proj_id)
     if not(os.path.exists(path1)):

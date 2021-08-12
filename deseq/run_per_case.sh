@@ -1,11 +1,11 @@
-in_dir="/data/projects/bioxpress/v-4.0/generated/annotation/per_case/"
+in_dir="/data/projects/bioxpress/v-5.0/generated/annotation/per_case/"
 
-for case in `cat generated/misc/cases.csv | grep -v case_id`
+for case in `cat list_files/cases.csv | grep -v case_id`
 do
 echo $case
 
 #create directory
-out_dir="/data/projects/bioxpress/v-4.0/generated/deseq/tmp/$case/"
+out_dir="/data/projects/bioxpress/v-5.0/generated/deseq/tmp/$case/"
 mkdir -p $out_dir
 
 #run script in ${outdir} directory

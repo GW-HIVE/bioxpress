@@ -180,7 +180,7 @@ def main():
                 gene  = spl[geneIdx].rstrip()
                 trans2gene[trans] = gene   
   
-    print "awww yea we have this many entries in our list mothafucka {}".format(len(trans2gene))
+    print "Number of entires in list: {}".format(len(trans2gene))
 
 
     ####
