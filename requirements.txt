@@ -1,0 +1,11 @@
+# required python packages
+requests
+json
+re
+csv
+os
+sys
+glob
+string
+optparse
+csvutil
