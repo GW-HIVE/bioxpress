@@ -61,24 +61,44 @@ Pipeline Overview
 
 **Step 1: Downloader**
 
-:doc:`downloader`
-
 The downloader step will use sample sheets obtained from [GDC Data Portal](https://portal.gdc.cancer.gov/repository) to download raw counts from RNA-Seq for Primary Tumor and Normal Tissue in all available TCGA Studies.
+
+Index for downloader: 
+
+.. toctree::
+    downloader
 
 **Step 2: Annotation**
 
-:doc:`annotation`
-
 The annotation step maps transcripts to gene symbols and creates the organized read count and category files used in the DESeq step.
+
+Index for annotation:
+
+.. toctree::
+    annotation
 
 **Step 3: DESeq**
 
-:doc:`deseq`
-
 DESeq is used to calculated differential expression and determine statistical significance.
+
+Index for DESeq:
+
+.. toctree::
+    deseq
 
 **Step 4: Publisher**
 
-:doc:`publisher`
-
 Differential expression results for each tissue are combined into one master dataset.
+
+Index for publisher: 
+
+.. toctree::
+    publisher
+
+**Other documentation**
+
+.. toctree::
+   updates
+   oncomx_glygen
+
+
