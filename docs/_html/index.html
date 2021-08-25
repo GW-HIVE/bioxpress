@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioXpress Pipeline v-5.0 README &mdash; bioxpress v-5.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BioXpress Downloader Step" href="downloader.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> bioxpress
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v-5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">bioxpress</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>BioXpress Pipeline v-5.0 README</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bioxpress-pipeline-v-5-0-readme">
+<h1>BioXpress Pipeline v-5.0 README<a class="headerlink" href="#bioxpress-pipeline-v-5-0-readme" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downloader.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloader.html#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-1-get-sample-list-files-from-the-gdc-data-portal"><em>Downloader Step 1</em> : Get sample list files from the GDC Data Portal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#method"><em>Method</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-2-run-the-script-get-data-all-samples-sh"><em>Downloader Step 2</em>: Run the script get_data_all_samples.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-3-run-the-script-get-hits-into-dir-py"><em>Downloader Step 3</em>: Run the script get_hits_into_dir.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id3"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id4"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id5"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-4-run-the-script-merge-files-tumor-and-normal-sh"><em>Downloader Step 4</em>: Run the script merge_files_tumor_and_normal.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id6"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id7"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="downloader.html#id8"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="annotation.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotation.html#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-1-run-the-script-merge-per-study-sh"><em>Annotation Step 1</em> : Run the script merge_per_study.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-2-run-the-script-merge-per-tissue-py"><em>Annotation Step 2</em> : Run the script merge_per_tissue.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id3"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-3-run-the-script-split-per-case-py"><em>Annotation Step 3</em> : Run the script split_per_case.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id4"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id5"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#id6"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deseq.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="deseq.html#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-1-run-the-script-run-per-study-sh"><em>DESeq step 1:</em> Run the script run_per_study.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-2-run-the-script-run-per-tissue-sh"><em>DESeq Step 2</em> : Run the script run_per_tissue.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id3"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-3-run-the-script-run-per-case-sh"><em>DESeq Step 3</em> : Run the script run_per_case.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id4"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id5"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="deseq.html#id6"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publisher.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="publisher.html#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publisher.html#publisher-step-1-run-the-script-de-publish-per-study-py"><em>Publisher Step 1</em> : Run the script de-publish-per-study.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="publisher.html#publisher-step-2-run-the-script-de-publish-per-tissue-py"><em>Publisher Step 2</em> : Run the script de-publish-per-tissue.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="publisher.html#id3"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="updates.html#tumor-samples-added-for-each-tissue"><strong>Tumor samples added for each tissue</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="updates.html#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="updates.html#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2"><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="updates.html#issue-running-deseq-per-case"><strong>Issue Running DESEq per case</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-oncomx"><strong>Processing for OncoMX</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#recipes">Recipes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#final-output-files">Final output files:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-glygen"><strong>Processing for Glygen</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Last Updated August 2021 by Ned Cauley</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The BioXpress pipeline takes raw count data from TCGA studies for both Primary Tumor and Normal Tissue and performs differential expression.</p>
+<p>The TCGA studies included in the BioXpress pipeline are (by <strong>tissue</strong>):</p>
+<ul class="simple">
+<li><strong>Bladder</strong>
+- TCGA-BLCA (Bladder urothelial carcinoma)</li>
+<li><strong>Breast</strong>
+- TCGA-BRCA (Breast invasive carcinoma)</li>
+<li><strong>Colorectal</strong>
+- TCGA-COAD (Colon adenocarcinoma)
+- TCGA-READ (Rectum adenocarcinoma)</li>
+<li><strong>Esophageal</strong>
+- TCGA-ESCA (Esophageal carcinoma)</li>
+<li><strong>Head and Neck</strong>
+- TCGA-HNSC (Head and Neck squamous cell carcinoma)</li>
+<li><strong>Kidney</strong>
+- TCGA-KICH (Kidney Chromophobe)
+- TCGA-KIRP (Kidney renal papillary cell carcinoma)
+- TCGA-KIRC (Kidney renal clear cell carcinoma)</li>
+<li><strong>Liver</strong>
+- TCGA-LIHC (Liver hepatocellular carcinoma)</li>
+<li><strong>Lung</strong>
+- TCGA-LUAD (Lung adenocarcinoma)
+- TCGA-LUSC (Lung squamous cell carcinoma)</li>
+<li><strong>Prostate</strong>
+- TCGA-PRAD (Prostate adenocarcinoma)</li>
+<li><strong>Stomach</strong>
+- TCGA-STAD (Stomach adenocarcinoma)</li>
+<li><strong>Thyroid</strong>
+- TCGA-THCA (Thyroid carcinoma)</li>
+<li><strong>Uterine</strong>
+- TCGA-UCEC (Uterine Corpus Endometrial Carcinoma)</li>
+</ul>
+</div>
+<div class="section" id="running-the-pipeline">
+<h2>Running the Pipeline<a class="headerlink" href="#running-the-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>To run the BioXpress pipeline, you need to download the scripts from the HIVE Lab github repo:
+<a class="reference external" href="https://github.com/GW-HIVE/bioxpress">GW HIVE Backend Code Repository</a>
+If running Bioxpress on a HIVE Lab server (such as glygen-vm-dev), place scripts in your user folder <code class="docutils literal notranslate"><span class="pre">/home/$yourusername/</span></code>.
+Data and other output from the scripts is stored in <code class="docutils literal notranslate"><span class="pre">/data/projects/bioxpress/</span></code>.</p>
+</div>
+<div class="section" id="pipeline-overview">
+<h2>Pipeline Overview<a class="headerlink" href="#pipeline-overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>Step 1: Downloader</strong></p>
+<p><a class="reference internal" href="downloader.html"><span class="doc">BioXpress Downloader Step</span></a></p>
+<p>The downloader step will use sample sheets obtained from [GDC Data Portal](<a class="reference external" href="https://portal.gdc.cancer.gov/repository">https://portal.gdc.cancer.gov/repository</a>) to download raw counts from RNA-Seq for Primary Tumor and Normal Tissue in all available TCGA Studies.</p>
+<p><strong>Step 2: Annotation</strong></p>
+<p><a class="reference internal" href="annotation.html"><span class="doc">BioXpress Annotation Step</span></a></p>
+<p>The annotation step maps transcripts to gene symbols and creates the organized read count and category files used in the DESeq step.</p>
+<p><strong>Step 3: DESeq</strong></p>
+<p><a class="reference internal" href="deseq.html"><span class="doc">BioXpress DESeq step</span></a></p>
+<p>DESeq is used to calculated differential expression and determine statistical significance.</p>
+<p><strong>Step 4: Publisher</strong></p>
+<p><a class="reference internal" href="publisher.html"><span class="doc">BioXpress Publisher Step</span></a></p>
+<p>Differential expression results for each tissue are combined into one master dataset.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="downloader.html" class="btn btn-neutral float-right" title="BioXpress Downloader Step" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, GW HIVE Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

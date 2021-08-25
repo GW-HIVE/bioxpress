@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioXpress Publisher Step &mdash; bioxpress v-5.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Major Changes from v-4.0" href="updates.html" />
+    <link rel="prev" title="BioXpress DESeq step" href="deseq.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bioxpress
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v-5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BioXpress Publisher Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publisher-step-1-run-the-script-de-publish-per-study-py"><em>Publisher Step 1</em> : Run the script de-publish-per-study.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#publisher-step-2-run-the-script-de-publish-per-tissue-py"><em>Publisher Step 2</em> : Run the script de-publish-per-tissue.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bioxpress</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>BioXpress Publisher Step</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/publisher.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bioxpress-publisher-step">
+<h1>BioXpress Publisher Step<a class="headerlink" href="#bioxpress-publisher-step" title="Permalink to this headline">¶</a></h1>
+<p><em>Step 4 of the BioXpress pipeline.</em></p>
+<div class="section" id="general-flow-of-scripts">
+<h2><strong>General Flow of Scripts</strong><a class="headerlink" href="#general-flow-of-scripts" title="Permalink to this headline">¶</a></h2>
+<p>de-publish-per-study.py -&gt; de-publish-per-tissue.py</p>
+</div>
+<div class="section" id="procedure">
+<h2><strong>Procedure</strong><a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="publisher-step-1-run-the-script-de-publish-per-study-py">
+<h3><em>Publisher Step 1</em> : Run the script de-publish-per-study.py<a class="headerlink" href="#publisher-step-1-run-the-script-de-publish-per-study-py" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="summary">
+<h4><em>Summary</em><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h4>
+<p>The python script de-publish-per-study.py takes the output from running DESeq in the previous step for each TCGA study and combines into one master file.</p>
+</div>
+<div class="section" id="method">
+<h4><em>Method</em><a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h4>
+<p>Edit the hard-coded paths in the script de-publish-per-study.py</p>
+<blockquote>
+<div><ul class="simple">
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the disease ontology mapping file (line ~26)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the uniprot accession id (protein id) mapping file (line ~40)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the refseq mapping file (line ~51)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the list of TCGA studies to include in the final output (line ~72)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">deseq_dir</span></code> for the folder containing all deseq output (line ~80)</li>
+<li>Specify the path to write the output (line ~135)</li>
+</ul>
+</div></blockquote>
+<p>Run the python script <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">de-publish-per-study.py</span></code></p>
+</div>
+<div class="section" id="output">
+<h4><em>Output</em><a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h4>
+<p>A csv file with the DEseq output for all TCGA studies, mapped to DO IDs, uniprot accession ids, and refseq ids. The path is specified in the script as one of the hard-coded lines edited during the method.</p>
+</div>
+</div>
+<div class="section" id="publisher-step-2-run-the-script-de-publish-per-tissue-py">
+<h3><em>Publisher Step 2</em> : Run the script de-publish-per-tissue.py<a class="headerlink" href="#publisher-step-2-run-the-script-de-publish-per-tissue-py" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4><em>Summary</em><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The python script de-publish-per-tissue.py takes the output from running DESeq in the previous step for each tissue and combines into one master file.</p>
+</div>
+<div class="section" id="id2">
+<h4><em>Method</em><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Edit the hard-coded paths in the script de-publish-per-study.py</p>
+<blockquote>
+<div><ul class="simple">
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the disease ontology mapping file (line ~26)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the uniprot accession id (protein id) mapping file (line ~40)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the refseq mapping file (line ~51)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">in_file</span></code> for the list of tissues to include in the final output (line ~72)</li>
+<li>Specify the <code class="docutils literal notranslate"><span class="pre">deseq_dir</span></code> for the folder containing all deseq output (line ~80)</li>
+<li>Specify the path to write the output (line ~135)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h4><em>Output</em><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>A csv file with the DEseq output for all tissues, mapped to DO IDs, uniprot accession ids, and refseq ids. The path is specified in the script as one of the hard-coded lines edited during the method.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="updates.html" class="btn btn-neutral float-right" title="Major Changes from v-4.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="deseq.html" class="btn btn-neutral float-left" title="BioXpress DESeq step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, GW HIVE Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

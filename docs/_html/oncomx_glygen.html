@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Post-processing for OncoMX and Glygen &mdash; bioxpress v-5.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Major Changes from v-4.0" href="updates.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bioxpress
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v-5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Post-processing for OncoMX and Glygen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#processing-for-oncomx"><strong>Processing for OncoMX</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#recipes">Recipes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#final-output-files">Final output files:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#processing-for-glygen"><strong>Processing for Glygen</strong></a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bioxpress</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Post-processing for OncoMX and Glygen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/oncomx_glygen.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="post-processing-for-oncomx-and-glygen">
+<h1>Post-processing for OncoMX and Glygen<a class="headerlink" href="#post-processing-for-oncomx-and-glygen" title="Permalink to this headline">¶</a></h1>
+<p><em>Processing done for integration of BioXpress data into OncoMX and Glygen.</em></p>
+<div class="section" id="processing-for-oncomx">
+<h2><strong>Processing for OncoMX</strong><a class="headerlink" href="#processing-for-oncomx" title="Permalink to this headline">¶</a></h2>
+<p>The final output from BioXpress v-5.0 is available on the OncoMX-tst server at the path: <code class="docutils literal notranslate"><span class="pre">/software/pipeline/integrator/downloads/bioxpress/v-5.0/`</span></code></p>
+<p>For OncoMX, the de_per_tissue.csv is used to report gene expression per tissue, however data.oncomx.org hosts both per tissue and per study datasets. The files are processed with the recipe pipeline. The recipes filter for all genes that are successfully mapped to uniprotkb accession IDs.</p>
+<div class="section" id="recipes">
+<h3>Recipes:<a class="headerlink" href="#recipes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_study.json</span></code>
+<code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_tissue.json</span></code></p>
+<p>The output is available on the OncoMX-tst server at the path: <code class="docutils literal notranslate"><span class="pre">/software/pipeline/integrator/unreviewed</span></code></p>
+</div>
+<div class="section" id="final-output-files">
+<h3>Final output files:<a class="headerlink" href="#final-output-files" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_study.csv</span></code>
+<code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_tissue.csv</span></code></p>
+</div>
+</div>
+<div class="section" id="processing-for-glygen">
+<h2><strong>Processing for Glygen</strong><a class="headerlink" href="#processing-for-glygen" title="Permalink to this headline">¶</a></h2>
+<p>The final output from BioXpress v-5.0 was modified to align with the previous input for cancer gene expression, and now includes the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>pmid</li>
+<li>sample_name</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>same as DOID and name</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>parent_doid</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>same as DOID</li>
+<li>All DOIDs in v-5.0 are parent terms</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>parent_doname</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>same as DOID and name</li>
+<li>All DOIDs in v-5.0 are parent terms</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>sample_id</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Taken from previous version, unclear on the origin of these numbers</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>The following mapping for the column sample_id was recovered from the previous version and mapped to DOIDs present in v-5.0</p>
+<div class="line-block">
+<div class="line">sample_name | sample_id |</div>
+<div class="line">———- | ———- |</div>
+</div>
+<p>DOID:10283 / Prostate cancer [PCa] | 42
+DOID:10534 / Stomach cancer [Stoca] | 19
+DOID:11054 / Urinary bladder cancer [UBC] | 34
+DOID:11934 / Head and neck cancer [H&amp;NC] | 46
+DOID:1612 / Breast cancer [BRCA] | 70
+DOID:1781 / Thyroid cancer [Thyca] | 16
+DOID:234 / Colon adenocarcinoma | 3
+DOID:263 / Kidney cancer [Kidca] &amp; Kidney renal cl … | 61
+DOID:3571 / Liver cancer [Livca] | 60
+DOID:3907 / Lung squamous cell carcinoma | 33
+DOID:3910 / Lung adenocarcinoma | 53
+DOID:4465 / Papillary renal cell carcinoma | 57
+DOID:4471 / Chromophobe adenocarcinoma | 23
+DOID:5041 / Esophageal cancer [EC] | 32</p>
+<p>The processed file for Glygen is available on the glygen-vm-dev server at <cite>/software/pipeline/integrator/downloads/bioxpress/August_2021/human_cancer_mRNA_expression_per_tissue_glygen.csv</cite></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="updates.html" class="btn btn-neutral float-left" title="Major Changes from v-4.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, GW HIVE Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

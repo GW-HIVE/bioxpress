@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Major Changes from v-4.0 &mdash; bioxpress v-5.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Post-processing for OncoMX and Glygen" href="oncomx_glygen.html" />
+    <link rel="prev" title="BioXpress Publisher Step" href="publisher.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bioxpress
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v-5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Major Changes from v-4.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tumor-samples-added-for-each-tissue"><strong>Tumor samples added for each tissue</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2"><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-running-deseq-per-case"><strong>Issue Running DESEq per case</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bioxpress</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Major Changes from v-4.0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/updates.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="major-changes-from-v-4-0">
+<h1>Major Changes from v-4.0<a class="headerlink" href="#major-changes-from-v-4-0" title="Permalink to this headline">¶</a></h1>
+<p><em>Major updates to the BioXpress from the previous version (v-4.0)</em></p>
+<div class="section" id="tumor-samples-added-for-each-tissue">
+<h2><strong>Tumor samples added for each tissue</strong><a class="headerlink" href="#tumor-samples-added-for-each-tissue" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Tissue | TCGA Stidues| New Samples |</div>
+<div class="line">———- | ———- | ———-|</div>
+<div class="line">Bladder | BLCA | 126 |</div>
+<div class="line">Breast | BRCA | 159 |</div>
+<div class="line">Colorectal | COAD, READ <a href="#id1"><span class="problematic" id="id2">|</span></a>159 (141, 18) |</div>
+<div class="line">Esophageal | ESCA | 25 |</div>
+<div class="line">Head and Neck | HNSC | 118 |</div>
+<div class="line">Kidney | KICH, KIRP, KIRC | 289 (15, 82, 192) |</div>
+<div class="line">Liver | LIHC | 169 |</div>
+<div class="line">Lung | LUAD, LUSC | 264 (174, 90) |</div>
+<div class="line">Prostate | PRAD | 116 |</div>
+<div class="line">Stomach | STAD | 22 |</div>
+<div class="line">Thyroid | THCA | 176 |</div>
+<div class="line">Uterine | UCEC | 216 |</div>
+</div>
+</div>
+<div class="section" id="mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids">
+<h2><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong><a class="headerlink" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids" title="Permalink to this headline">¶</a></h2>
+<p>The following is a list of the current cancer tissue (DOID) to healthy tissue (UBERON ID) mapping:</p>
+<div class="line-block">
+<div class="line">DO Name (DOID) | UBERON Name (UBERON ID) |</div>
+<div class="line">———- | ———- |</div>
+</div>
+<p>Stomach Cancer (DOID:10534) | Stomach (UBERON:0000945)
+Thyroid Cancer (DOID:1781) | Thyroid Gland (UBERON:0002046)
+Esophageal Cancer (DOID:5041) | Esophagus (UBERON:0001043)
+Kidney Cancer (DOID:263) | Adult Mammalian Kidney (UBERON:0000082)
+Lung Cancer (DOID:1324) | Lung (UBERON:0002048)
+Uterine Cancer (DOID:363) | Uterine Cervix (UBERON:0000002)
+Bladder Cancer (DOID:11054) | Urinary Bladder (UBERON:0001255)
+Prostate Cancer (DOID:10283) | Prostate Gland (UBERON:0002367)
+Colorectal Cancer (DOID:9256) | Colon (UBERON:0001155), Rectum (UBERON:0001052)
+Liver Cancer (DOID:3571) | Liver (UBERON:0002107)
+Breast Cancer (DOID:1612) | Thoracic Mammary Gland (UBERON:0005200)
+Head and Neck  Cancer (DOID:11934) | Oral Cavity (UBERON:0000167)</p>
+</div>
+<div class="section" id="automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2">
+<h2><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong><a class="headerlink" href="#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2" title="Permalink to this headline">¶</a></h2>
+<p>Due to the added samples in v-5.0, the ordering of samples in the count matrices needed for DESeq2 was disrupted and DESeq2 was producing randomized results. Column and row names in count matrices are now re-ordered as part of the <cite>DESeq.R</cite> script, so that samples are aligned correctly. This re-ordering should account for instances of added samples in future versions.</p>
+</div>
+<div class="section" id="issue-running-deseq-per-case">
+<h2><strong>Issue Running DESEq per case</strong><a class="headerlink" href="#issue-running-deseq-per-case" title="Permalink to this headline">¶</a></h2>
+<p>The step for DESeq per case was performed, however the results were not used to calculate subjects up/down/total in the publisher step, as was the case in v-4.0. Also, a final publisher file per case was not generated.</p>
+<p>The run_per_case.py script performs DESeq analysis using both the tumor and normal count files per case. For most cases, there is only one tumor counts file and one normal counts file. DESeq encounters an error when running analysis with a sample size of 1 per group:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Error</span> <span class="pre">in</span> <span class="pre">checkForExperimentalReplicates(object,</span> <span class="pre">modelMatrix):`</span></code></p>
+<p><cite>The design matrix has the same number of samples and coefficients to fit, so estimation of dispersion is not possible. Treating samples as replicates was deprecated in v1.20 and no longer supported since v1.22.</cite></p>
+<p>The DESeq2 vignette also mentions DESeq analysis with no replicates in their <a class="reference external" href="http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#can-i-use-deseq2-to-analyze-a-dataset-without-replicates">FAQ</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Can</span> <span class="pre">I</span> <span class="pre">use</span> <span class="pre">DESeq2</span> <span class="pre">to</span> <span class="pre">analyze</span> <span class="pre">a</span> <span class="pre">dataset</span> <span class="pre">without</span> <span class="pre">replicates?</span> <span class="pre">No.</span> <span class="pre">This</span> <span class="pre">analysis</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">possible</span> <span class="pre">in</span> <span class="pre">DESeq2.</span></code></p>
+<p>This is likely sue to the read count normalization model used by DESeq. DESeq’s model contains a variable called the dispersion estimate, which relies on the variance of the one sample’s read counts for a gene to the mean read count for that gene across the whole group (condition). If there are no other replicates on the group then there is no comparison to be made and no normalization can occur.</p>
+<p>Even for cases that have only 2-3 replicates, the significance of the DE analysis should be heavily scrutinized as such a low replicate number is not a standard statistical practice, because low sample sizes may lead to an increase in false positive and false negatives.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="oncomx_glygen.html" class="btn btn-neutral float-right" title="Post-processing for OncoMX and Glygen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="publisher.html" class="btn btn-neutral float-left" title="BioXpress Publisher Step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, GW HIVE Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
