@@ -88,18 +88,22 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Post-processing for OncoMX and Glygen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#processing-for-oncomx"><strong>Processing for OncoMX</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#recipes">Recipes:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#final-output-files">Final output files:</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#processing-for-oncomx"><strong>Processing for OncoMX</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#processing-for-glygen"><strong>Processing for Glygen</strong></a></li>
 </ul>
 </li>
@@ -177,17 +181,13 @@
 <h2><strong>Processing for OncoMX</strong><a class="headerlink" href="#processing-for-oncomx" title="Permalink to this headline">¶</a></h2>
 <p>The final output from BioXpress v-5.0 is available on the OncoMX-tst server at the path: <code class="docutils literal notranslate"><span class="pre">/software/pipeline/integrator/downloads/bioxpress/v-5.0/`</span></code></p>
 <p>For OncoMX, the de_per_tissue.csv is used to report gene expression per tissue, however data.oncomx.org hosts both per tissue and per study datasets. The files are processed with the recipe pipeline. The recipes filter for all genes that are successfully mapped to uniprotkb accession IDs.</p>
-<div class="section" id="recipes">
-<h3>Recipes:<a class="headerlink" href="#recipes" title="Permalink to this headline">¶</a></h3>
+<p>Recipes</p>
 <p><code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_study.json</span></code>
 <code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_tissue.json</span></code></p>
 <p>The output is available on the OncoMX-tst server at the path: <code class="docutils literal notranslate"><span class="pre">/software/pipeline/integrator/unreviewed</span></code></p>
-</div>
-<div class="section" id="final-output-files">
-<h3>Final output files:<a class="headerlink" href="#final-output-files" title="Permalink to this headline">¶</a></h3>
+<p>Final output files</p>
 <p><code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_study.csv</span></code>
 <code class="docutils literal notranslate"><span class="pre">human_cancer_mRNA_expression_per_tissue.csv</span></code></p>
-</div>
 </div>
 <div class="section" id="processing-for-glygen">
 <h2><strong>Processing for Glygen</strong><a class="headerlink" href="#processing-for-glygen" title="Permalink to this headline">¶</a></h2>
@@ -229,26 +229,39 @@
 </ul>
 </div></blockquote>
 </div></blockquote>
-<p>The following mapping for the column sample_id was recovered from the previous version and mapped to DOIDs present in v-5.0</p>
-<div class="line-block">
-<div class="line">sample_name | sample_id |</div>
-<div class="line">———- | ———- |</div>
-</div>
-<p>DOID:10283 / Prostate cancer [PCa] | 42
-DOID:10534 / Stomach cancer [Stoca] | 19
-DOID:11054 / Urinary bladder cancer [UBC] | 34
-DOID:11934 / Head and neck cancer [H&amp;NC] | 46
-DOID:1612 / Breast cancer [BRCA] | 70
-DOID:1781 / Thyroid cancer [Thyca] | 16
-DOID:234 / Colon adenocarcinoma | 3
-DOID:263 / Kidney cancer [Kidca] &amp; Kidney renal cl … | 61
-DOID:3571 / Liver cancer [Livca] | 60
-DOID:3907 / Lung squamous cell carcinoma | 33
-DOID:3910 / Lung adenocarcinoma | 53
-DOID:4465 / Papillary renal cell carcinoma | 57
-DOID:4471 / Chromophobe adenocarcinoma | 23
-DOID:5041 / Esophageal cancer [EC] | 32</p>
-<p>The processed file for Glygen is available on the glygen-vm-dev server at <cite>/software/pipeline/integrator/downloads/bioxpress/August_2021/human_cancer_mRNA_expression_per_tissue_glygen.csv</cite></p>
+<p>The following mapping for the column sample_id was recovered from the previous version and mapped to DOIDs present in v-5.0
++——————————————————–+————+
+| sample_name                                            |  sample_id |
++========================================================+============+
+| DOID:10283 / Prostate cancer [PCa]                     | 42         |
++——————————————————–+————+
+| DOID:10534 / Stomach cancer [Stoca]                    | 19         |
++——————————————————–+————+
+| DOID:11054 / Urinary bladder cancer [UBC]              | 34         |
++——————————————————–+————+
+| DOID:11934 / Head and neck cancer [H&amp;NC]               | 46         |
++——————————————————–+————+
+| DOID:1612 / Breast cancer [BRCA]                       | 70         |
++——————————————————–+————+
+| DOID:1781 / Thyroid cancer [Thyca]                     | 16         |
++——————————————————–+————+
+| DOID:234 / Colon adenocarcinoma                        | 3          |
++——————————————————–+————+
+| DOID:263 / Kidney cancer [Kidca] &amp; Kidney renal cl … | 61         |
++——————————————————–+————+
+| DOID:3571 / Liver cancer [Livca]                       | 60         |
++——————————————————–+————+
+| DOID:3907 / Lung squamous cell carcinoma               | 33         |
++——————————————————–+————+
+| DOID:3910 / Lung adenocarcinoma                        | 53         |
++——————————————————–+————+
+| DOID:4465 / Papillary renal cell carcinoma             | 57         |
++——————————————————–+————+
+| DOID:4471 / Chromophobe adenocarcinoma                 | 23         |
++——————————————————–+————+
+| DOID:5041 / Esophageal cancer [EC]                     | 32         |
++——————————————————–+————+</p>
+<p>The processed file for Glygen is available on the glygen-vm-dev server at <code class="docutils literal notranslate"><span class="pre">/software/pipeline/integrator/downloads/bioxpress/August_2021/human_cancer_mRNA_expression_per_tissue_glygen.csv</span></code></p>
 </div>
 </div>
 

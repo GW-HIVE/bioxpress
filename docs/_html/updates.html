@@ -89,14 +89,22 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Major Changes from v-4.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tumor-samples-added-for-each-tissue"><strong>Tumor samples added for each tissue</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to UBERON IDs.</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2"><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#issue-running-deseq-per-case"><strong>Issue Running DESEq per case</strong></a></li>
 </ul>
@@ -174,42 +182,134 @@
 <p><em>Major updates to the BioXpress from the previous version (v-4.0)</em></p>
 <div class="section" id="tumor-samples-added-for-each-tissue">
 <h2><strong>Tumor samples added for each tissue</strong><a class="headerlink" href="#tumor-samples-added-for-each-tissue" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">Tissue | TCGA Stidues| New Samples |</div>
-<div class="line">———- | ———- | ———-|</div>
-<div class="line">Bladder | BLCA | 126 |</div>
-<div class="line">Breast | BRCA | 159 |</div>
-<div class="line">Colorectal | COAD, READ <a href="#id1"><span class="problematic" id="id2">|</span></a>159 (141, 18) |</div>
-<div class="line">Esophageal | ESCA | 25 |</div>
-<div class="line">Head and Neck | HNSC | 118 |</div>
-<div class="line">Kidney | KICH, KIRP, KIRC | 289 (15, 82, 192) |</div>
-<div class="line">Liver | LIHC | 169 |</div>
-<div class="line">Lung | LUAD, LUSC | 264 (174, 90) |</div>
-<div class="line">Prostate | PRAD | 116 |</div>
-<div class="line">Stomach | STAD | 22 |</div>
-<div class="line">Thyroid | THCA | 176 |</div>
-<div class="line">Uterine | UCEC | 216 |</div>
-</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2"><blockquote class="first">
+<div>Tissue</div></blockquote>
+<blockquote class="last">
+<div>Bladder</div></blockquote>
+</td>
+<td rowspan="2"><blockquote class="first">
+<div>TCGA Studies</div></blockquote>
+<blockquote class="last">
+<div>BLCA</div></blockquote>
+</td>
+<td rowspan="2"><blockquote class="first">
+<div>New Samples</div></blockquote>
+<blockquote class="last">
+<div>126</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td>Breast</td>
+<td>BRCA</td>
+<td>159</td>
+</tr>
+<tr class="row-even"><td>Colorectal</td>
+<td>COAD/READ</td>
+<td>159 (141/18)</td>
+</tr>
+<tr class="row-odd"><td>Esophageal</td>
+<td>ESCA</td>
+<td>25</td>
+</tr>
+<tr class="row-even"><td>Head and Neck</td>
+<td>HNSC</td>
+<td>118</td>
+</tr>
+<tr class="row-odd"><td>Kidney</td>
+<td>KICH/KIRP/KIRC</td>
+<td>289(15/82/192)</td>
+</tr>
+<tr class="row-even"><td>Liver</td>
+<td>LIHC</td>
+<td>169</td>
+</tr>
+<tr class="row-odd"><td>Lung</td>
+<td>LUAD/LUSC</td>
+<td>264 (174/90)</td>
+</tr>
+<tr class="row-even"><td>Prostate</td>
+<td>PRAD</td>
+<td>116</td>
+</tr>
+<tr class="row-odd"><td>Stomach</td>
+<td>STAD</td>
+<td>22</td>
+</tr>
+<tr class="row-even"><td>Thyroid</td>
+<td>THCA</td>
+<td>176</td>
+</tr>
+<tr class="row-odd"><td>Uterine</td>
+<td>UCEC</td>
+<td>216</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids">
-<h2><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong><a class="headerlink" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids" title="Permalink to this headline">¶</a></h2>
+<h2><strong>Mapping files updated to reflect most recent mapping of DOIDs to UBERON IDs.</strong><a class="headerlink" href="#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids" title="Permalink to this headline">¶</a></h2>
 <p>The following is a list of the current cancer tissue (DOID) to healthy tissue (UBERON ID) mapping:</p>
-<div class="line-block">
-<div class="line">DO Name (DOID) | UBERON Name (UBERON ID) |</div>
-<div class="line">———- | ———- |</div>
-</div>
-<p>Stomach Cancer (DOID:10534) | Stomach (UBERON:0000945)
-Thyroid Cancer (DOID:1781) | Thyroid Gland (UBERON:0002046)
-Esophageal Cancer (DOID:5041) | Esophagus (UBERON:0001043)
-Kidney Cancer (DOID:263) | Adult Mammalian Kidney (UBERON:0000082)
-Lung Cancer (DOID:1324) | Lung (UBERON:0002048)
-Uterine Cancer (DOID:363) | Uterine Cervix (UBERON:0000002)
-Bladder Cancer (DOID:11054) | Urinary Bladder (UBERON:0001255)
-Prostate Cancer (DOID:10283) | Prostate Gland (UBERON:0002367)
-Colorectal Cancer (DOID:9256) | Colon (UBERON:0001155), Rectum (UBERON:0001052)
-Liver Cancer (DOID:3571) | Liver (UBERON:0002107)
-Breast Cancer (DOID:1612) | Thoracic Mammary Gland (UBERON:0005200)
-Head and Neck  Cancer (DOID:11934) | Oral Cavity (UBERON:0000167)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">DO Name (DOID)</th>
+<th class="head">UBERON Name (UBERON ID)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Stomach Cancer (DOID:10534)</td>
+<td>Stomach (UBERON:0000945)</td>
+</tr>
+<tr class="row-odd"><td>Thyroid Cancer (DOID:1781)</td>
+<td>Thyroid Gland (UBERON:0002046)</td>
+</tr>
+<tr class="row-even"><td>Esophageal Cancer (DOID:5041)</td>
+<td>Esophagus (UBERON:0001043)</td>
+</tr>
+<tr class="row-odd"><td>Kidney Cancer (DOID:263)</td>
+<td><p class="first">Adult Mammalian Kidney</p>
+<p class="last">(UBERON:0000082)</p>
+</td>
+</tr>
+<tr class="row-even"><td>Lung Cancer (DOID:1324)</td>
+<td>Lung (UBERON:0002048)</td>
+</tr>
+<tr class="row-odd"><td>Uterine Cancer (DOID:363)</td>
+<td>Uterine Cervix (UBERON:0000002)</td>
+</tr>
+<tr class="row-even"><td>Bladder Cancer (DOID:11054)</td>
+<td>Urinary Bladder (UBERON:0001255)</td>
+</tr>
+<tr class="row-odd"><td>Prostate Cancer (DOID:10283)</td>
+<td>Prostate Gland (UBERON:0002367)</td>
+</tr>
+<tr class="row-even"><td>Colorectal Cancer (DOID:9256)</td>
+<td><p class="first">Colon (UBERON:0001155)</p>
+<p class="last">Rectum (UBERON:0001052)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Liver Cancer (DOID:3571)</td>
+<td>Liver (UBERON:0002107)</td>
+</tr>
+<tr class="row-even"><td>Breast Cancer (DOID:1612)</td>
+<td>Thoracic Mammary Gland
+(UBERON:0005200)</td>
+</tr>
+<tr class="row-odd"><td>Head and Neck  Cancer (DOID:11934)</td>
+<td>Oral Cavity (UBERON:0000167)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2">
 <h2><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong><a class="headerlink" href="#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2" title="Permalink to this headline">¶</a></h2>

@@ -120,9 +120,17 @@
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
 </ul>
@@ -216,8 +224,10 @@
 <li>All of the filters can also be selected manually using the search tree on the left side of the page at the link above. To select a files filter or a cases filter, that tab must be selected on the search bar</li>
 </ul>
 <p>To get the Primary Tumor samples, enter the following into the query box</p>
-<p><code class="docutils literal notranslate"><span class="pre">files.analysis.workflow_type</span> <span class="pre">in</span> <span class="pre">[&quot;HTSeq</span> <span class="pre">-</span> <span class="pre">Counts&quot;]</span>&#160; <span class="pre">and</span> <span class="pre">files.data_type</span> <span class="pre">in</span> <span class="pre">[&quot;Gene</span> <span class="pre">Expression</span> <span class="pre">Quantification&quot;]</span>
-<span class="pre">and</span> <span class="pre">cases.samples.sample_type</span> <span class="pre">in</span> <span class="pre">[&quot;Primary</span> <span class="pre">Tumor&quot;]</span> <span class="pre">and</span> <span class="pre">cases.project.program.name</span> <span class="pre">in</span> <span class="pre">[&quot;TCGA&quot;]</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">workflow_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HTSeq - Counts&quot;</span><span class="p">]</span>  <span class="ow">and</span> <span class="n">files</span><span class="o">.</span><span class="n">data_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Gene Expression Quantification&quot;</span><span class="p">]</span>
+<span class="ow">and</span> <span class="n">cases</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">sample_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Primary Tumor&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">cases</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;TCGA&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
 <p>Click <code class="docutils literal notranslate"><span class="pre">Submit</span> <span class="pre">Query</span></code></p>
 <p>The search results screen will now appear. On this screen, click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">All</span> <span class="pre">Files</span> <span class="pre">To</span> <span class="pre">Cart</span></code>
 Then select the <code class="docutils literal notranslate"><span class="pre">Cart</span></code> on the upper right of the page.</p>
@@ -227,8 +237,10 @@ Then select the <code class="docutils literal notranslate"><span class="pre">Car
 </ul>
 <p>Remove all samples from the cart, then repeat Step 1 for the Normal Tissue samples.</p>
 <p>In the Advanced Search query box add enter the following for Normal Tissue samples:</p>
-<p><code class="docutils literal notranslate"><span class="pre">files.analysis.workflow_type</span> <span class="pre">in</span> <span class="pre">[&quot;HTSeq</span> <span class="pre">-</span> <span class="pre">Counts&quot;]</span>&#160; <span class="pre">and</span> <span class="pre">files.data_type</span> <span class="pre">in</span> <span class="pre">[&quot;Gene</span> <span class="pre">Expression</span> <span class="pre">Quantification&quot;]</span>
-<span class="pre">and</span> <span class="pre">cases.samples.sample_type</span> <span class="pre">in</span> <span class="pre">[&quot;Solid</span> <span class="pre">Tissue</span> <span class="pre">Normal&quot;]</span> <span class="pre">and</span> <span class="pre">cases.project.program.name</span> <span class="pre">in</span> <span class="pre">[&quot;TCGA&quot;]</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">workflow_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HTSeq - Counts&quot;</span><span class="p">]</span>  <span class="ow">and</span> <span class="n">files</span><span class="o">.</span><span class="n">data_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Gene Expression Quantification&quot;</span><span class="p">]</span>
+<span class="ow">and</span> <span class="n">cases</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">sample_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Solid Tissue Normal&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">cases</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;TCGA&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
 <p>Once both Sample Sheets are downloaded, Primary Tumor and Normal Tissue, move both sample sheets to the server on which the pipeline will be ran, to the path <code class="docutils literal notranslate"><span class="pre">/data/projects/bioxpress/$version/downloads/</span></code> where $version one increment higher then the latest version of BioXpress i.e. latest version is <code class="docutils literal notranslate"><span class="pre">v-4.0</span></code> so new run will be <code class="docutils literal notranslate"><span class="pre">v-5.0</span></code>.</p>
 </div>
 </div>

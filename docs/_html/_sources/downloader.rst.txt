@@ -32,8 +32,10 @@ Click on the button labeled ``Advanced Search`` on the upper right of the reposi
 
 To get the Primary Tumor samples, enter the following into the query box
 
-``files.analysis.workflow_type in ["HTSeq - Counts"]  and files.data_type in ["Gene Expression Quantification"]
-and cases.samples.sample_type in ["Primary Tumor"] and cases.project.program.name in ["TCGA"]``
+::
+
+    files.analysis.workflow_type in ["HTSeq - Counts"]  and files.data_type in ["Gene Expression Quantification"]
+    and cases.samples.sample_type in ["Primary Tumor"] and cases.project.program.name in ["TCGA"]
 
 Click ``Submit Query``
 
@@ -48,8 +50,10 @@ Remove all samples from the cart, then repeat Step 1 for the Normal Tissue sampl
 
 In the Advanced Search query box add enter the following for Normal Tissue samples:
 
-``files.analysis.workflow_type in ["HTSeq - Counts"]  and files.data_type in ["Gene Expression Quantification"]
-and cases.samples.sample_type in ["Solid Tissue Normal"] and cases.project.program.name in ["TCGA"]``
+::
+
+    files.analysis.workflow_type in ["HTSeq - Counts"]  and files.data_type in ["Gene Expression Quantification"]
+    and cases.samples.sample_type in ["Solid Tissue Normal"] and cases.project.program.name in ["TCGA"]
 
 Once both Sample Sheets are downloaded, Primary Tumor and Normal Tissue, move both sample sheets to the server on which the pipeline will be ran, to the path ``/data/projects/bioxpress/$version/downloads/`` where $version one increment higher then the latest version of BioXpress i.e. latest version is ``v-4.0`` so new run will be ``v-5.0``.
 

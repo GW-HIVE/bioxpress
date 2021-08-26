@@ -90,14 +90,6 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
@@ -180,125 +172,6 @@
             
   <div class="section" id="bioxpress-pipeline-v-5-0-readme">
 <h1>BioXpress Pipeline v-5.0 README<a class="headerlink" href="#bioxpress-pipeline-v-5-0-readme" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="downloader.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="downloader.html#procedure"><strong>Procedure</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-1-get-sample-list-files-from-the-gdc-data-portal"><em>Downloader Step 1</em> : Get sample list files from the GDC Data Portal</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#summary"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#method"><em>Method</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-2-run-the-script-get-data-all-samples-sh"><em>Downloader Step 2</em>: Run the script get_data_all_samples.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id1"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id2"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#output"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-3-run-the-script-get-hits-into-dir-py"><em>Downloader Step 3</em>: Run the script get_hits_into_dir.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id3"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id4"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id5"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="downloader.html#downloader-step-4-run-the-script-merge-files-tumor-and-normal-sh"><em>Downloader Step 4</em>: Run the script merge_files_tumor_and_normal.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id6"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id7"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="downloader.html#id8"><em>Output</em></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="annotation.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="annotation.html#procedure"><strong>Procedure</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-1-run-the-script-merge-per-study-sh"><em>Annotation Step 1</em> : Run the script merge_per_study.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#summary"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#method"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#output"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-2-run-the-script-merge-per-tissue-py"><em>Annotation Step 2</em> : Run the script merge_per_tissue.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id1"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id2"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id3"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="annotation.html#annotation-step-3-run-the-script-split-per-case-py"><em>Annotation Step 3</em> : Run the script split_per_case.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id4"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id5"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="annotation.html#id6"><em>Output</em></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deseq.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="deseq.html#procedure"><strong>Procedure</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-1-run-the-script-run-per-study-sh"><em>DESeq step 1:</em> Run the script run_per_study.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#summary"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#method"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#output"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-2-run-the-script-run-per-tissue-sh"><em>DESeq Step 2</em> : Run the script run_per_tissue.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id1"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id2"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id3"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="deseq.html#deseq-step-3-run-the-script-run-per-case-sh"><em>DESeq Step 3</em> : Run the script run_per_case.sh</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id4"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id5"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="deseq.html#id6"><em>Output</em></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="publisher.html#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="publisher.html#procedure"><strong>Procedure</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="publisher.html#publisher-step-1-run-the-script-de-publish-per-study-py"><em>Publisher Step 1</em> : Run the script de-publish-per-study.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#summary"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#method"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#output"><em>Output</em></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="publisher.html#publisher-step-2-run-the-script-de-publish-per-tissue-py"><em>Publisher Step 2</em> : Run the script de-publish-per-tissue.py</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#id1"><em>Summary</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#id2"><em>Method</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="publisher.html#id3"><em>Output</em></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="updates.html#tumor-samples-added-for-each-tissue"><strong>Tumor samples added for each tissue</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="updates.html#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="updates.html#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2"><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="updates.html#issue-running-deseq-per-case"><strong>Issue Running DESEq per case</strong></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-oncomx"><strong>Processing for OncoMX</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#recipes">Recipes:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#final-output-files">Final output files:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-glygen"><strong>Processing for Glygen</strong></a></li>
-</ul>
-</li>
-</ul>
-</div>
 <p>Last Updated August 2021 by Ned Cauley</p>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
@@ -476,17 +349,13 @@ Data and other output from the scripts is stored in <code class="docutils litera
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="updates.html#tumor-samples-added-for-each-tissue"><strong>Tumor samples added for each tissue</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="updates.html#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="updates.html#mapping-files-updated-to-reflect-most-recent-mapping-of-doids-to-uberon-ids"><strong>Mapping files updated to reflect most recent mapping of DOIDs to UBERON IDs.</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="updates.html#automatic-alphabetical-re-ordering-of-count-matrices-for-deseq2"><strong>Automatic alphabetical re-ordering of count matrices for DESeq2</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="updates.html#issue-running-deseq-per-case"><strong>Issue Running DESEq per case</strong></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-oncomx"><strong>Processing for OncoMX</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#recipes">Recipes:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="oncomx_glygen.html#final-output-files">Final output files:</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-oncomx"><strong>Processing for OncoMX</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="oncomx_glygen.html#processing-for-glygen"><strong>Processing for Glygen</strong></a></li>
 </ul>
 </li>

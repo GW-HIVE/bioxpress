@@ -1,15 +1,6 @@
 BioXpress Pipeline v-5.0 README
 ===============================
 
-.. toctree::
-   downloader
-   annotation
-   deseq
-   publisher
-   updates
-   oncomx_glygen
-
-
 Last Updated August 2021 by Ned Cauley
 
 Description
@@ -63,7 +54,7 @@ Pipeline Overview
 
 The downloader step will use sample sheets obtained from [GDC Data Portal](https://portal.gdc.cancer.gov/repository) to download raw counts from RNA-Seq for Primary Tumor and Normal Tissue in all available TCGA Studies.
 
-Index for downloader: 
+Index for downloader:
 
 .. toctree::
     downloader
@@ -90,7 +81,7 @@ Index for DESeq:
 
 Differential expression results for each tissue are combined into one master dataset.
 
-Index for publisher: 
+Index for publisher:
 
 .. toctree::
     publisher
@@ -100,5 +91,3 @@ Index for publisher:
 .. toctree::
    updates
    oncomx_glygen
-
-
