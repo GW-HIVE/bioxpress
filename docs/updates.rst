@@ -6,40 +6,71 @@ Major Changes from v-4.0
 **Tumor samples added for each tissue**
 ---------------------------------------
 
-| Tissue | TCGA Stidues| New Samples |
-| ---------- | ---------- | ----------|
-| Bladder | BLCA | 126 |
-| Breast | BRCA | 159 |
-| Colorectal | COAD, READ |159 (141, 18) |
-| Esophageal | ESCA | 25 |
-| Head and Neck | HNSC | 118 |
-| Kidney | KICH, KIRP, KIRC | 289 (15, 82, 192) |
-| Liver | LIHC | 169 |
-| Lung | LUAD, LUSC | 264 (174, 90) |
-| Prostate | PRAD | 116 |
-| Stomach | STAD | 22 |
-| Thyroid | THCA | 176 |
-| Uterine | UCEC | 216 |
++----------------+----------------+----------------+
+| Tissue         | TCGA Studies   | New Samples    |
+|================+================+================|
+| Bladder        | BLCA           | 126            |
++----------------+----------------+----------------+
+| Breast         | BRCA           | 159            |
++----------------+----------------+----------------+
+| Colorectal     | COAD/READ      | 159 (141/18)   |
++----------------+----------------+----------------+
+| Esophageal     | ESCA           | 25             |
++----------------+----------------+----------------+
+| Head and Neck  | HNSC           | 118            |
++----------------+----------------+----------------+
+| Kidney         | KICH/KIRP/KIRC | 289(15/82/192) |
++----------------+----------------+----------------+
+| Liver          | LIHC           | 169            |
++----------------+----------------+----------------+
+| Lung           | LUAD/LUSC      | 264 (174/90)   |
++----------------+----------------+----------------+
+| Prostate       | PRAD           | 116            |
++----------------+----------------+----------------+
+| Stomach        | STAD           | 22             |
++----------------+----------------+----------------+
+| Thyroid        | THCA           | 176            |
++----------------+----------------+----------------+
+| Uterine        | UCEC           | 216            |
++----------------+----------------+----------------+
 
-**Mapping files updated to reflect most recent mapping of DOIDs to Uberon IDs.**
+**Mapping files updated to reflect most recent mapping of DOIDs to UBERON IDs.**
 --------------------------------------------------------------------------------
 
 The following is a list of the current cancer tissue (DOID) to healthy tissue (UBERON ID) mapping:
 
-| DO Name (DOID) | UBERON Name (UBERON ID) |
-| ---------- | ---------- |
-Stomach Cancer (DOID:10534) | Stomach (UBERON:0000945)
-Thyroid Cancer (DOID:1781) | Thyroid Gland (UBERON:0002046)
-Esophageal Cancer (DOID:5041) | Esophagus (UBERON:0001043)
-Kidney Cancer (DOID:263) | Adult Mammalian Kidney (UBERON:0000082)
-Lung Cancer (DOID:1324) | Lung (UBERON:0002048)
-Uterine Cancer (DOID:363) | Uterine Cervix (UBERON:0000002)
-Bladder Cancer (DOID:11054) | Urinary Bladder (UBERON:0001255)
-Prostate Cancer (DOID:10283) | Prostate Gland (UBERON:0002367)
-Colorectal Cancer (DOID:9256) | Colon (UBERON:0001155), Rectum (UBERON:0001052)
-Liver Cancer (DOID:3571) | Liver (UBERON:0002107)
-Breast Cancer (DOID:1612) | Thoracic Mammary Gland (UBERON:0005200)
-Head and Neck  Cancer (DOID:11934) | Oral Cavity (UBERON:0000167)
++------------------------------------+------------------------------------+
+| DO Name (DOID)                     | UBERON Name (UBERON ID)            |
++====================================+====================================+
+| Stomach Cancer (DOID:10534)        | Stomach (UBERON:0000945)           |
++------------------------------------+------------------------------------+
+| Thyroid Cancer (DOID:1781)         | Thyroid Gland (UBERON:0002046)     |
++------------------------------------+------------------------------------+
+| Esophageal Cancer (DOID:5041)      | Esophagus (UBERON:0001043)         |
++------------------------------------+------------------------------------+
+| Kidney Cancer (DOID:263)           | Adult Mammalian Kidney             |
+|                                    |                                    |
+|                                    | (UBERON:0000082)                   |
++------------------------------------+------------------------------------+
+| Lung Cancer (DOID:1324)            | Lung (UBERON:0002048)              |
++------------------------------------+------------------------------------+
+| Uterine Cancer (DOID:363)          | Uterine Cervix (UBERON:0000002)    |
++------------------------------------+------------------------------------+
+| Bladder Cancer (DOID:11054)        | Urinary Bladder (UBERON:0001255)   |
++------------------------------------+------------------------------------+
+| Prostate Cancer (DOID:10283)       | Prostate Gland (UBERON:0002367)    |
++------------------------------------+------------------------------------+
+| Colorectal Cancer (DOID:9256)      | Colon (UBERON:0001155)             |
+|                                    |                                    |
+|                                    | Rectum (UBERON:0001052)            |
++------------------------------------+------------------------------------+
+| Liver Cancer (DOID:3571)           | Liver (UBERON:0002107)             |
++------------------------------------+------------------------------------+
+| Breast Cancer (DOID:1612)          | Thoracic Mammary Gland             |
+|                                    | (UBERON:0005200)                   |
++------------------------------------+------------------------------------+
+| Head and Neck  Cancer (DOID:11934) | Oral Cavity (UBERON:0000167)       |
++------------------------------------+------------------------------------+
 
 **Automatic alphabetical re-ordering of count matrices for DESeq2**
 -------------------------------------------------------------------
