@@ -41,6 +41,7 @@ The final output from BioXpress v-5.0 was modified to align with the previous in
   - Taken from previous version, unclear on the origin of these numbers
 
 The following mapping for the column sample_id was recovered from the previous version and mapped to DOIDs present in v-5.0
+
 +--------------------------------------------------------+------------+
 | sample_name                                            |  sample_id |
 +========================================================+============+
