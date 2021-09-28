@@ -1,3 +1,24 @@
+"""
+This script decompresses all read count files and uses the log file generated in the previous
+get_data_all_samples.sh to filter out all TCGA studies that have less than 10 Normal Tissue samples.
+
+Input:
+########
+All inputs are currently hard-coded
+    * log file
+    * results.tar.gz
+
+Output:
+########
+    * a folder per TCGA study named $study_$sampletype_intermediate and a read count file for each sample
+
+Usage:
+########
+Currently no options available
+    * python get_hits_into_dir.py
+
+"""
+
 import sys
 import os
 import glob
@@ -5,10 +26,7 @@ import glob
 collector = {} #all samples 
 want = [] #only studies with >=10 tumor and normal samples
 
-
-################################################################
-### From "get_data_all_samples.log" download log count up the number of samples
-
+"""From "get_data_all_samples.log" download log count up the number of samples"""
 with open("/data/projects/bioxpress/v-5.0/downloads/get_data_all_samples.log", 'r') as fil:
     for line in fil:
         spl = line.split()
@@ -25,9 +43,7 @@ with open("/data/projects/bioxpress/v-5.0/downloads/get_data_all_samples.log", '
         if not(sam_type in collector[proj_id]):
             collector[proj_id][sam_type] = num_sam
 
-################################################################
-### Isolate those proj_id (tcga studies) with >= 10 tumor and normal samples
-
+"""Isolate those proj_id (tcga studies) with >= 10 tumor and normal samples"""
 for proj_id in collector:
     if "Primary-Tumor" in collector[proj_id]:
         if collector[proj_id]["Primary-Tumor"] >= 10:
@@ -37,10 +53,7 @@ for proj_id in collector:
                     want.append(proj_id)
 
 
-
-################################################################
-### Extract and compile hitlists
-
+"""Extract and compile hitlists"""
 topDir = "/data/projects/bioxpress/v-5.0/downloads/"
 for proj_id in want:
     print proj_id
