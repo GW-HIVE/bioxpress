@@ -86,6 +86,11 @@ After the script has completed, you will have a folder for each TCGA study with 
 *Downloader Step 3*: Run the script get_hits_into_dir.py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+'get_hits_into_dir.py <https://github.com/GW-HIVE/bioxpress/blob/main/downloader/get_hits_into_dir.py>'_
+
+.. automodule:: get_hits_into_dir.py
+  :members:
+
 *Summary*
 """""""""
 
