@@ -83,13 +83,8 @@ Run the shell script ``sh get_data_all_samples.sh``
 
 After the script has completed, you will have a folder for each TCGA study with all read count files compressed into a file ``results.tar.gz``. You will also have three log files, one each for Tumor and Normal as well as a third log file that is the two combined ``get_data_all_samples.log``
 
-*Downloader Step 3*: Run the script get_hits_into_dir.py
+*Downloader Step 3*: `get_hits_into_dir.py <https://github.com/GW-HIVE/bioxpress/blob/main/downloader/get_hits_into_dir.py>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`get_hits_into_dir.py <https://github.com/GW-HIVE/bioxpress/blob/main/downloader/get_hits_into_dir.py>`_
-
-.. automodule:: get_hits_into_dir.py
-  :members:
 
 *Summary*
 """""""""
