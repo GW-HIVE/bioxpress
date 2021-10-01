@@ -1,0 +1,8 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "Bioexpress"
+authors = [{name = "Abdel-Rahman Ibrahim", email = "aibrahimv2@gwmail.gwu.edu"}]
+dynamic = ["version", "description"]
