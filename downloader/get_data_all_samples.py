@@ -1,3 +1,22 @@
+"""
+This script uses the generated log file from `get_data_all_samples.sh` to create local
+directories, and filters out TCGA studies with low sample sizes. This script is run twice by
+the bash script: once for the normal sample and once for the tumor sample. 
+
+Input: 
+########
+All inputs are currently hard-coded
+    * log file generated from `get_data_all_samples.sh`
+
+Output: 
+########
+    * A folder per TCGA study with all read count files compressed into a file `results.tar.gz`.
+    * Three log files: 
+        * `get_data_all_samples_stn.log`: contains the noraml sample.
+        * `get_data_all_samples_pt.log`: contains the tumor sample.
+        * `get_data_all_samples.log`: contains both the normal and tumor samples. 
+"""
+
 import requests
 import json
 import re

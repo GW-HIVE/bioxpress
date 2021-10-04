@@ -16,7 +16,6 @@ Usage:
 ########
 Currently no options available
     * python get_hits_into_dir.py
-
 """
 
 import sys
