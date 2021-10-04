@@ -6,7 +6,7 @@ category file per study (defines whether a sample ID corresponds to Primary-Tumo
 Input: 
 ########
 All inputs are currently hard-coded
-    * 
+    * The path name for the normal and tumor samples stored under the variable `in_dir`.
 
 Output: 
 ########
