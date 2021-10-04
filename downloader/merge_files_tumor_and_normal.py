@@ -1,3 +1,24 @@
+"""
+This script merges the normal and tumor read count files from their respective intermediate folders
+so that there is one read count file per study (all samples as fields and one row per gene) and one
+category file per study (defines whether a sample ID corresponds to Primary-Tumor or Solid Tissue Normal).
+
+Input: 
+########
+All inputs are currently hard-coded
+    * The path name for the normal and tumor samples stored under the variable `in_dir`.
+
+Output: 
+########
+    * The `out_dir` specified in `merge_files_tumor_and_normal.sh` contains two files per study: one for
+    counts and one for categories.
+        * The counts files contains all read counts for that study for each gene and provide sample IDs
+        as the fields. 
+        * The categories file contains information on each sample ID as either Primary Tumor or Solid Tissue Normal.
+    * For checking sample names and numbers lists from v-5.0, all lists and the sample log have been moved to the
+    folder `downloads/v-5.0/sample_lists`.
+"""
+
 import sys
 import os
 import glob

@@ -1,3 +1,28 @@
+"""
+This script takes case and sample IDs from the sample sheets downloaded from the GDC data portal
+and splits annotation data so that there is one folder per case with only that case's annotation data.
+
+Input:
+########
+All inputs are currently hard-coded
+    * studies.csv
+    * primary_tumor.tsv
+    * solid_tissue_normal.tsv
+    * study_id.case_id.htseq.counts
+    * study_id.case_id.categories
+    * study_id.htseq.counts
+
+Output: 
+########
+    * A folder is generated for each case ID that has a tumor sample and a normal tissue sample.
+        * Two files are generated per case.
+        * These files are needed to run DESeq per case.
+
+Usage: 
+########
+Currently no options available
+"""
+
 import os,sys
 import string
 import json
