@@ -1,3 +1,30 @@
+"""
+This script maps all ENSG IDs to gene symbols based on a set of mapping files. It also filters out
+microRNA genes. The steps for creating the mapping files are described in the annotation README.
+
+Input: 
+########
+All inputs are currently hard-coded
+    * `in_dir`: path for the count and category files per study (the final output of the Downloader Step)
+    * `out_dir`: path for generated annotations
+    * Three mapping files: 
+        * `map_file_one`
+        * `map_file_two`
+        * `map_file_three`
+
+Output: 
+########
+    * All ENSG IDs in the counts files have been replaced by gene symbols in new count files located in
+    the `out_dir`. 
+        * Transcripts have also been merged per gene and microRNA genes filtered out. The categories
+        files remain the same but are copied over to the annotation folder.
+
+Usage: 
+########
+Currently no options available
+
+"""
+
 import sys
 import os
 import glob

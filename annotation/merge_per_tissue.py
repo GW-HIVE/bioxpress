@@ -1,3 +1,28 @@
+"""
+This script takes all files created by the `merge_per_study.sh`
+script and merges them based on the file `tissues.csv`, which
+assigns TCGA studies to specific tissues terms. 
+
+Input:
+########
+All inputs are currently hard-coded
+    * `in_file`: tissues.csv
+    * `out_file_one`: path for 1st output file. 
+    * `out_file_two`: path for 2nd output file.
+    * study_id.categories
+    * study_id.htseq.counts
+
+Output: 
+########
+    * Read count and category files are generated for each tissue specified
+    in the tissues.csv file.
+
+Usage: 
+########
+Currently no options available 
+
+"""
+
 import os,sys
 import string
 import json
