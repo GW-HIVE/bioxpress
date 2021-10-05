@@ -1,3 +1,22 @@
+"""
+This script takes the output from running DESeq in the previous step for each tissue and combines
+it into one master file.
+
+Input:
+########
+All inputs are currently hard-coded
+    * disease ontology mapping file (~line 37)
+    * uniprot accession ID (protein ID) mapping file (~line 57)
+    * refseq mapping file (~line 72)
+    * list of tissues to include in the final output (~line 83)
+    * folder containing all deseq output (~line 105)
+    * path to write the output (~line 172)
+
+Usage: 
+########
+Currently no options available
+"""
+
 import os,sys
 import string
 import json

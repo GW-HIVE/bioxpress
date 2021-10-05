@@ -1,3 +1,29 @@
+"""
+This script takes the output from running DESeq in the previous step for each TCGA study and
+combines them into one master file.
+
+Input: 
+########
+All inputs are currently hard-coded
+    * disease ontology mapping file (~line 41)
+    * uniprot accession id (protein id) mapping file (~line 55)
+    * refseq mapping file (~line 66)
+    * list of TCGA studies to include in the final output (~line 87)
+    * folder containing all deseq output (~line 95)
+    * path for output file (~line 150)
+
+Output: 
+########
+* A csv file with the DEseq output for all TCGA studies, mapped to DO IDs,
+uniprot accession IDs, and refseq IDs.
+    * The path is specified in the script as one of the hard-coded lines edited
+    under the "Input" section.
+
+Usage: 
+########
+Currently no options available
+"""
+
 import os,sys
 import string
 import json
