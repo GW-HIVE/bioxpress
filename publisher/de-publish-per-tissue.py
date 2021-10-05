@@ -12,6 +12,13 @@ All inputs are currently hard-coded
     * folder containing all deseq output (~line 105)
     * path to write the output (~line 172)
 
+Output: 
+########
+    * A csv file with the DEseq output for all tissues, mapped to
+    DO IDs, uniprot accession IDs, and refseq IDs. The path is
+    specified in the script as one of the hard-coded lines under the "Input"
+    section.
+
 Usage: 
 ########
 Currently no options available
