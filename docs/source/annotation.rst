@@ -45,6 +45,8 @@ All ENSG IDs in the counts files have been replaced by gene symbols in new count
 
 *Annotation Step 2* : Run the script merge_per_tissue.py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automodule:: merge_per_study
+  :members:
 
 *Summary*
 """""""""
