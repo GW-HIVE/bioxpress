@@ -14,8 +14,8 @@ merge_per_study.sh -> merge_per_tissue.py -> split_per_case.py
 *Annotation Step 1* : Run the script merge_per_study.sh
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: /annotation/merge_per_study.py
-  :members:
+.. automodule:: split_per_case
+   :members:
 
 *Summary*
 """""""""

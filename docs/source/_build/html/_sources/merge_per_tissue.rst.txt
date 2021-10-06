@@ -1,0 +1,7 @@
+merge\_per\_tissue module
+=========================
+
+.. automodule:: merge_per_tissue
+   :members:
+   :undoc-members:
+   :show-inheritance:

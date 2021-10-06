@@ -14,12 +14,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../downloader'), 
-                os.path.abspath('../annotation'), 
-                os.path.abspath('../deseq'),
-                os.path.abspath('../publisher'))
+sys.path.insert(0, os.path.abspath('../annotation'))
 
-import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
