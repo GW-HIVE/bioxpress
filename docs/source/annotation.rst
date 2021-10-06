@@ -14,6 +14,9 @@ merge_per_study.sh -> merge_per_tissue.py -> split_per_case.py
 *Annotation Step 1* : Run the script merge_per_study.sh
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. automodule:: /annotation/merge_per_study.py
+  :members:
+
 *Summary*
 """""""""
 
@@ -45,8 +48,6 @@ All ENSG IDs in the counts files have been replaced by gene symbols in new count
 
 *Annotation Step 2* : Run the script merge_per_tissue.py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. automodule:: merge_per_study
-  :members:
 
 *Summary*
 """""""""
