@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioXpress Annotation Step &mdash; HIVE BioXpress v-5.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BioXpress DESeq step" href="deseq.html" />
+    <link rel="prev" title="BioXpress Downloader Step" href="downloader.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> HIVE BioXpress
+          </a>
+              <div class="version">
+                v-5.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BioXpress Annotation Step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#annotation-step-1-run-the-script-merge-per-study-sh"><em>Annotation Step 1</em> : Run the script merge_per_study.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#annotation-step-2-run-the-script-merge-per-tissue-py"><em>Annotation Step 2</em> : Run the script merge_per_tissue.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#annotation-step-3-run-the-script-split-per-case-py"><em>Annotation Step 3</em> : Run the script split_per_case.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deseq.html">BioXpress DESeq step</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIVE BioXpress</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>BioXpress Annotation Step</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/annotation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bioxpress-annotation-step">
+<h1>BioXpress Annotation Step<a class="headerlink" href="#bioxpress-annotation-step" title="Permalink to this headline"></a></h1>
+<p><em>Step 2 of the BioXpress pipeline</em></p>
+<section id="general-flow-of-scripts">
+<h2><strong>General Flow of Scripts</strong><a class="headerlink" href="#general-flow-of-scripts" title="Permalink to this headline"></a></h2>
+<p>merge_per_study.sh -&gt; merge_per_tissue.py -&gt; split_per_case.py</p>
+</section>
+<section id="procedure">
+<h2><strong>Procedure</strong><a class="headerlink" href="#procedure" title="Permalink to this headline"></a></h2>
+<section id="annotation-step-1-run-the-script-merge-per-study-sh">
+<h3><em>Annotation Step 1</em> : Run the script merge_per_study.sh<a class="headerlink" href="#annotation-step-1-run-the-script-merge-per-study-sh" title="Permalink to this headline"></a></h3>
+<section id="summary">
+<h4><em>Summary</em><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h4>
+<p>The shell script merge_per_study.sh provides arguments to the python script merge_per_study.py. This step maps all ENSG IDs to gene symbols based on a set of mapping files. It will also filter out microRNA genes. The steps for creating the mapping files are described in the annotation README.</p>
+</section>
+<section id="method">
+<h4><em>Method</em><a class="headerlink" href="#method" title="Permalink to this headline"></a></h4>
+<p>The mapping files are available in the folder <code class="docutils literal notranslate"><span class="pre">/annotation/mapping_files/</span></code> and moved to a similar path in the version of your run of Bioxpress</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mart_export.txt</p></li>
+<li><p>mart_export_remap_retired.txt</p></li>
+<li><p>new_mappings.txt</p></li>
+</ul>
+</div></blockquote>
+<p>Edit the hard-coded paths in merge_per_study.sh</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">in_dir</span></code> as the folder containing the final output of the Downloader step, count and category files per study.</p></li>
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">out_dir</span></code> so that it is now in the top folder <code class="docutils literal notranslate"><span class="pre">generated/annotation</span></code> not <code class="docutils literal notranslate"><span class="pre">downloads</span></code></p></li>
+<li><p>Specify the location of the mapping files downloaded in the previous sub-step</p></li>
+</ul>
+</div></blockquote>
+<p>Validate the file <code class="docutils literal notranslate"><span class="pre">studies.dat</span></code> contains all studies that you wish to process</p>
+<p>Run the shell script <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">merge_per_study.sh</span></code></p>
+</section>
+<section id="output">
+<h4><em>Output</em><a class="headerlink" href="#output" title="Permalink to this headline"></a></h4>
+<p>All ENSG IDs in the counts files have been replaced by gene symbols in new count files located in the <cite>out_dir</cite>. Transcripts have also been merged per gene and microRNA genes filtered out. The categories files remain the same but are copied over to the annotation folder.</p>
+</section>
+</section>
+<section id="annotation-step-2-run-the-script-merge-per-tissue-py">
+<h3><em>Annotation Step 2</em> : Run the script merge_per_tissue.py<a class="headerlink" href="#annotation-step-2-run-the-script-merge-per-tissue-py" title="Permalink to this headline"></a></h3>
+<section id="id1">
+<h4><em>Summary</em><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<p>The python script merge_per_tissue.py takes all files created by the script merge_per_study.sh and merges these files based on the file tissues.csv, which assigns TCGA studies to specific tissues terms.</p>
+</section>
+<section id="id2">
+<h4><em>Method</em><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<p>Download the files tissues.csv from the previous version of BioXpress at <code class="docutils literal notranslate"><span class="pre">/data/projects/bioxpress/$version/generated/misc/tissues.csv</span></code> and place in a similar folder in the version of your run of BioXpress</p>
+<p>Edit the hard-coded paths in merge_per_tissue.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Edit the line (line ~23) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v$version/generated/misc/tissues.csv&quot;</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~36) <code class="docutils literal notranslate"><span class="pre">out_file_one</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_tissue/%s.htseq.counts&quot;</span> <span class="pre">%</span> <span class="pre">(tissue_id)</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~37) <code class="docutils literal notranslate"><span class="pre">out_file_two</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_tissue/%s.categories&quot;</span> <span class="pre">%</span> <span class="pre">(tissue_id)</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~45) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.categories&quot;</span> <span class="pre">%</span> <span class="pre">(study_id)</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~52) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.htseq.counts&quot;</span> <span class="pre">%</span> <span class="pre">(study_id)</span></code> with the version for your current run of BioXpress</p></li>
+</ul>
+</div></blockquote>
+<p>Run the python script <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">merge_per_tissue.py</span></code></p>
+</section>
+<section id="id3">
+<h4><em>Output</em><a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<p>Read count and category files are generated for each tissue specified in the tissues.csv file.</p>
+</section>
+</section>
+<section id="annotation-step-3-run-the-script-split-per-case-py">
+<h3><em>Annotation Step 3</em> : Run the script split_per_case.py<a class="headerlink" href="#annotation-step-3-run-the-script-split-per-case-py" title="Permalink to this headline"></a></h3>
+<section id="id4">
+<h4><em>Summary</em><a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<p>The python script split_per_case.py takes case and sample IDs from the sample sheets downloaded from the GDC data portal and splits annotation data so that there is one folder per case with only that case’s annotation data.</p>
+</section>
+<section id="id5">
+<h4><em>Method</em><a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<p>Edit the hard-coded paths in split_per_case.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Edit the line (line ~29) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/misc/studies.csv&quot;</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~38) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/downloads/sample_list_from_gdc/gdc_sample_sheet.primary_tumor.tsv&quot;</span></code> with the version for your current run of BioXpress as well as the same of the sample sheet for tumor samples downloaded from the GDC data portal</p></li>
+<li><p>Edit the line (line ~57) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/downloads/sample_list_from_gdc/gdc_sample_sheet.solid_tissue_normal.tsv&quot;</span></code> with the version for your current run of BioXpress as well as the same of the sample sheet for normal samples downloaded from the GDC data portal</p></li>
+<li><p>Edit the line (line ~81) <code class="docutils literal notranslate"><span class="pre">out_file_one</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_case/%s.%s.htseq.counts&quot;</span> <span class="pre">%</span> <span class="pre">(study_id,case_id)</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~82) <code class="docutils literal notranslate"><span class="pre">out_file_two</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_case/%s.%s.categories&quot;</span> <span class="pre">%</span> <span class="pre">(study_id,case_id)</span></code> with the version for your current run of BioXpress</p></li>
+<li><p>Edit the line (line ~85) <code class="docutils literal notranslate"><span class="pre">in_file</span> <span class="pre">=</span> <span class="pre">&quot;/data/projects/bioxpress/v-5.0/generated/annotation/per_study/%s.htseq.counts&quot;</span> <span class="pre">%</span> <span class="pre">(study_id)</span></code> with the version for your current run of BioXpress</p></li>
+</ul>
+</div></blockquote>
+<p>Run the python script <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">split_per_case.py</span></code></p>
+</section>
+<section id="id6">
+<h4><em>Output</em><a class="headerlink" href="#id6" title="Permalink to this headline"></a></h4>
+<p>A folder is generated for each case ID that has a tumor sample and a normal tissue sample. Two files are generated per case: read counts and categories. These files are needed to run DESeq per case.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="downloader.html" class="btn btn-neutral float-left" title="BioXpress Downloader Step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deseq.html" class="btn btn-neutral float-right" title="BioXpress DESeq step" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, GW HIVE Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+split\_per\_case module
+=======================
+
+.. automodule:: split_per_case
+   :members:
+   :undoc-members:
+   :show-inheritance:

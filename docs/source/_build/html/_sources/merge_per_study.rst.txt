@@ -1,0 +1,7 @@
+merge\_per\_study module
+========================
+
+.. automodule:: merge_per_study
+   :members:
+   :undoc-members:
+   :show-inheritance:

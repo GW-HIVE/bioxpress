@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioXpress DESeq step &mdash; HIVE BioXpress v-5.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BioXpress Publisher Step" href="publisher.html" />
+    <link rel="prev" title="BioXpress Annotation Step" href="annotation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> HIVE BioXpress
+          </a>
+              <div class="version">
+                v-5.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">BioXpress Downloader Step</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">BioXpress Annotation Step</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BioXpress DESeq step</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-flow-of-scripts"><strong>General Flow of Scripts</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure"><strong>Procedure</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deseq-step-1-run-the-script-run-per-study-sh"><em>DESeq step 1:</em> Run the script run_per_study.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deseq-step-2-run-the-script-run-per-tissue-sh"><em>DESeq Step 2</em> : Run the script run_per_tissue.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><em>Output</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deseq-step-3-run-the-script-run-per-case-sh"><em>DESeq Step 3</em> : Run the script run_per_case.sh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><em>Summary</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><em>Method</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><em>Output</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">BioXpress Publisher Step</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Major Changes from v-4.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oncomx_glygen.html">Post-processing for OncoMX and Glygen</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIVE BioXpress</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>BioXpress DESeq step</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/deseq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bioxpress-deseq-step">
+<h1>BioXpress DESeq step<a class="headerlink" href="#bioxpress-deseq-step" title="Permalink to this headline"></a></h1>
+<p><em>Step 3 of the BioXpress pipeline.</em></p>
+<section id="general-flow-of-scripts">
+<h2><strong>General Flow of Scripts</strong><a class="headerlink" href="#general-flow-of-scripts" title="Permalink to this headline"></a></h2>
+<p>run_per_study.py -&gt; run_per_tissue.py -&gt; run_per_case.py</p>
+</section>
+<section id="procedure">
+<h2><strong>Procedure</strong><a class="headerlink" href="#procedure" title="Permalink to this headline"></a></h2>
+<section id="deseq-step-1-run-the-script-run-per-study-sh">
+<h3><em>DESeq step 1:</em> Run the script run_per_study.sh<a class="headerlink" href="#deseq-step-1-run-the-script-run-per-study-sh" title="Permalink to this headline"></a></h3>
+<section id="summary">
+<h4><em>Summary</em><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h4>
+<p>The python script run_per_study.py provides arguments to the R script deseq.R. The count and category files generated  from the Annotation step are used to calculate differential expression and statistical significance.
+The result is a series of files per tissue including the normalized reads (DESeq normalization method), the DE results and significance, and QC files such as the PCA plot.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Note: this step is time consuming (~2-3 hours of run time)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="method">
+<h4><em>Method</em><a class="headerlink" href="#method" title="Permalink to this headline"></a></h4>
+<p>Edit the hard-coded paths in the script run_per_tissue.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">in_dir</span></code> to be the folder containing the final output files of the Annotation steps for per study</p></li>
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">out_dir</span></code></p></li>
+<li><p>Ensure that the file <code class="docutils literal notranslate"><span class="pre">list_files/studies.csv</span></code> contains all of the tissues you wish to process
+- Note: the studies can be run separately (in the event that 2-3 hours cannot be dedicated to run the all studies at once) by creating separate dat files with specific tissues to run</p></li>
+</ul>
+</div></blockquote>
+<p>Run the shell script <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">run_per_study.sh</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Note: the R libraries specified in deseq.R will need to be installed if running on a new server or system, as these installations are not included in the scripts</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="output">
+<h4><em>Output</em><a class="headerlink" href="#output" title="Permalink to this headline"></a></h4>
+<p>A set of files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>log file</p></li>
+<li><p>deSeq_reads_normalized.csv
+- Normalized read counts (DESeq normalization method applied)</p></li>
+<li><p>results_significance.csv
+- log2fc differential expression results and statistical significance (t-test)</p></li>
+<li><p>dispersion.png</p></li>
+<li><p>distance_heatmap.png</p></li>
+<li><p>pca.png
+- Principal component analysis plot, important for observing how well the Primary Tumor and Solid Tissue Normal group together</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="deseq-step-2-run-the-script-run-per-tissue-sh">
+<h3><em>DESeq Step 2</em> : Run the script run_per_tissue.sh<a class="headerlink" href="#deseq-step-2-run-the-script-run-per-tissue-sh" title="Permalink to this headline"></a></h3>
+<section id="id1">
+<h4><em>Summary</em><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<p>The python script run_per_tissue.py provides arguments to the R script deseq.R. The count and category files generated from the Annotation step are used to calculate differential expression and statistical significance. The result is a series of files per study including the normalized reads (DESeq normalization method), the DE results and significance, and QC files such as the PCA plot.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Note: this step is time consuming (~2-3 hours of run time)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h4><em>Method</em><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<p>Edit the hard-coded paths in the script run_per_tissue.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">in_dir</span></code> to be the folder containing the final output files of the Annotation steps for per tissue</p></li>
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">out_dir</span></code></p></li>
+<li><p>Ensure that the file <code class="docutils literal notranslate"><span class="pre">list_files/tissue.dat</span></code> contains all of the tissues you wish to process
+- Note: the tissues can be run separately (in the event that 2-3 hours cannot be dedicated to run the all tissues at once) by creating separate dat files with specific tissues to run</p></li>
+</ul>
+</div></blockquote>
+<p>Run the shell script <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">run_per_tissue.sh</span></code></p>
+</section>
+<section id="id3">
+<h4><em>Output</em><a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<p>A set of files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>log file</p></li>
+<li><p>deSeq_reads_normalized.csv
+- Normalized read counts (DESeq normalization method applied)</p></li>
+<li><p>results_significance.csv
+- log2fc differential expression results and statistical significance (t-test)</p></li>
+<li><p>dispersion.png</p></li>
+<li><p>distance_heatmap.png</p></li>
+<li><p>pca.png
+- Principal component analysis plot, important for observing how well the Primary Tumor and Solid Tissue Normal group together</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="deseq-step-3-run-the-script-run-per-case-sh">
+<h3><em>DESeq Step 3</em> : Run the script run_per_case.sh<a class="headerlink" href="#deseq-step-3-run-the-script-run-per-case-sh" title="Permalink to this headline"></a></h3>
+<section id="id4">
+<h4><em>Summary</em><a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<p>The python script run_per_case.py provides arguments to the R script deseq.R. The count and category files generated from the Annotation step are used to calculate differential expression and statistical significance. The result is a series of files per case including the normalized reads (DESeq normalization method), the DE results and significance, and QC files such as the PCA plot.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Note: this step is time consuming (~2-3 hours of run time)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id5">
+<h4><em>Method</em><a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<p>Edit the hard-coded paths in the script run_per_case.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">in_dir</span></code> to be the folder containing the final output files of the Annotation step for per_case</p></li>
+<li><p>Specify the <code class="docutils literal notranslate"><span class="pre">out_dir</span></code></p></li>
+<li><p>Ensure that the file <code class="docutils literal notranslate"><span class="pre">list_files/cases.csv</span></code> contains all of the cases you wish to process
+- Note: the cases can be run separately (in the event that 2-3 hours cannot be dedicated to run the all tissues at once) by creating separate dat files with specific cases to run</p></li>
+</ul>
+</div></blockquote>
+<p>Run the shell script <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">run_per_tissue.sh</span></code></p>
+</section>
+<section id="id6">
+<h4><em>Output</em><a class="headerlink" href="#id6" title="Permalink to this headline"></a></h4>
+<p>A set of files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>log file</p></li>
+<li><p>deSeq_reads_normalized.csv
+- Normalized read counts (DESeq normalization method applied)</p></li>
+<li><p>results_significance.csv
+- log2fc differential expression results and statistical significance (t-test)</p></li>
+<li><p>dispersion.png</p></li>
+<li><p>distance_heatmap.png</p></li>
+<li><p>pca.png
+- Principal component analysis plot, important for observing how well the Primary Tumor and Solid Tissue Normal group together</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="annotation.html" class="btn btn-neutral float-left" title="BioXpress Annotation Step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="publisher.html" class="btn btn-neutral float-right" title="BioXpress Publisher Step" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, GW HIVE Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

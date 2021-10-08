@@ -1,0 +1,9 @@
+annotation
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   merge_per_study
+   merge_per_tissue
+   split_per_case
