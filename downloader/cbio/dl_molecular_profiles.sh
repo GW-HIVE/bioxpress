@@ -1,6 +1,6 @@
 #!/bin/bash
 
-output_dir="/data/shared/repos/bioxpress/downloads/cbio"
+output_dir="/data/shared/repos/bioxpress/downloads/current"
 url="https://www.cbioportal.org/api/molecular-profiles?projection=SUMMARY&pageSize=100000&pageNumber=0&direction=ASC"
 curl -G "${url}" \
      -H "accept: application/json" \
@@ -10,4 +10,8 @@ curl -G "${url}" \
 # The next step would be getting entrez gene IDs from somewhere.
 # These are the 3 things you need to download Z-scores.
 
-# Create download directory and update current symlink
+cd "${output_dir}"
+jq '[.[] | select(
+  .molecularAlterationType == "MRNA_EXPRESSION" and 
+  (.molecularProfileId | test("tcga") and test("normal_"))
+)]' all_molecular_profiles.json > tcga_mrna_expression.json
