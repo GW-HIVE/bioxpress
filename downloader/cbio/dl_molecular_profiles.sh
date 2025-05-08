@@ -24,14 +24,20 @@ mkdir -p sample_lists
 
 # Loop through each study ID
 for id in $study_ids; do
-    echo "Fetching sample lists for study: $id"
+  echo "Fetching sample lists for study: $id"
     
-    # Perform API call
-    curl -s -X 'GET' \
-      "https://www.cbioportal.org/api/studies/${id}/sample-lists?projection=SUMMARY&pageSize=10000000&pageNumber=0&direction=ASC" \
-      -H 'accept: application/json' \
-      -o "sample_lists/${id}_sample_lists.json"
+  # Perform API call
+  curl -s -X 'GET' \
+    "https://www.cbioportal.org/api/studies/${id}/sample-lists?projection=SUMMARY&pageSize=10000000&pageNumber=0&direction=ASC" \
+    -H 'accept: application/json' \
+    -o "sample_lists/${id}_sample_lists.json"
     
-    echo "Saved to: ${id}_sample_lists.json"
-    echo
+  echo "Saved to: ${id}_sample_lists.json"
+done
+
+# Extract sample list IDs and store them in a Bash array
+mapfile -t sample_list_ids < <(jq -r '.[].sampleListId' sample_lists/*.json)
+# Iterate through the array to call the API
+for id in "${sample_list_ids[@]}"; do
+  echo "Calling API with $id"
 done
